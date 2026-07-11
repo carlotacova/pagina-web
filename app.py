@@ -78,8 +78,7 @@ def formulario():
     return render_template("formulario.html")
 @app.route("/registro",methods=["GET","POST"])
 def registro():
-    if 'usuario' not in session:
-        return "Acceso denegado.", 403
+    
 
     if request.method == "GET":
         # Aquí puedes procesar los datos del formulario
