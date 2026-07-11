@@ -1,0 +1,385 @@
+/* --- VARIABLES DE DISEÑO (Paleta Blanco y Marrón) --- */
+:root {
+    --white: #FFFFFF;
+    --bg-cream: #FDFBF7; /* Un blanco roto/crema muy sutil para dar calidez */
+    --chocolate-light: #8D5B4C;
+    --chocolate-dark: #3D2314; /* Marrón oscuro profundo */
+    --text-dark: #2B1A10;
+    --text-light: #6E5A4F;
+    --font-title: 'Playfair Display', Georgia, serif;
+    --font-body: 'Poppins', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--chocolate-dark);
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--chocolate-light);
+    margin: 15px auto 30px auto;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(61, 35, 20, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--chocolate-dark);
+    letter-spacing: 1px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--chocolate-light);
+}
+
+.nav .btn-nav {
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.nav .btn-nav:hover {
+    background-color: var(--chocolate-light);
+    color: var(--white);
+}
+
+/* --- SECCIÓN HERO (INICIO) --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.4)), 
+                url('https://images.unsplash.com/photo-1548907040-4d42b52145ca?q=80&w=1920') no-repeat center center/cover;
+    /* Nota: He puesto una URL de cortesía de Unsplash con temática de chocolate. Se puede cambiar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition);
+    border: 1px solid var(--chocolate-dark);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--chocolate-dark);
+}
+
+/* --- SECCIÓN ABOUT US --- */
+.about {
+    background-color: var(--bg-cream);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 36px;
+}
+
+.about-text .divider {
+    margin: 15px 0 30px 0;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.about-image .image-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #E6DFD9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    color: var(--chocolate-light);
+    font-style: italic;
+    border: 1px dashed var(--chocolate-light);
+}
+
+/* --- SECCIÓN PRODUCTOS --- */
+.productos {
+    text-align: center;
+}
+
+.productos h2 {
+    font-size: 36px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(61, 35, 20, 0.03);
+    border: 1px solid #F0EAE5;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(61, 35, 20, 0.08);
+}
+
+.product-img-holder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-family: var(--font-title);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Variación de color discreta para té y nibs */
+.product-grid .product-card:nth-child(4) .product-img-holder,
+.product-grid .product-card:nth-child(5) .product-img-holder {
+    background-color: var(--chocolate-light);
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--chocolate-light);
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.contacto {
+    background-color: var(--bg-cream);
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 36px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    text-align: left;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #F0EAE5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--chocolate-dark);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D6C9C0;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-cream);
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--chocolate-dark);
+    background-color: var(--white);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: var(--chocolate-light);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--chocolate-dark);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+/* --- RESPONSIVIDAD (MÓVILES) --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav {
+        margin-top: 15px;
+    }
+    
+    .nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .container {
+        padding: 60px 20px;
+    }
+}
+/* Contenedor de cada producto */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Crucial para que nada se salga de las esquinas redondeadas */
+    overflow: hidden; 
+}
+
+/* La imagen del producto */
+.product-img {
+    width: 100%;          /* Fuerza a la imagen a ocupar el 100% del ancho del recuadro */
+    height: 200px;        /* Define una altura fija para que todas las tarjetas se vean simétricas */
+    object-fit: cover;    /* Hace que la imagen se adapte y recorte proporcionalmente sin deformarse */
+    border-radius: 4px;   /* Un ligero redondeado opcional para las esquinas de la imagen */
+    display: block;       /* Elimina espacios en blanco extraños debajo de la imagen */
+}

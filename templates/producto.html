@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block contenido %}
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="divider"></div>
+            <p>En Apokacao, ofrecemos una selección cuidadosamente curada de productos derivados del cacao, cada uno elaborado con pasión y respeto por la tradición chocolatera.</p>
+            
+            <div class="product-grid">
+           {% for producto in productos %}
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-img-holder">{{ producto.category }}</div>
+                <img src="{{ producto.image }}" alt="{{ producto.title }}" class="product-img">
+                    <h3>{{ producto.title }}</h3>
+                    <p>{{ producto.description }}</p>
+                    <span class="price">${{ "%.2f"|format(producto.price) }}</span>
+
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

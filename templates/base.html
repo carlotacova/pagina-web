@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apokacao | Chocolatería Premium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <!-- Fuentes de Google para un toque sofisticado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header class="header">
+        <div class="logo">Apokacao</div>
+        <nav class="nav">
+            <a href="/inicio">Inicio</a>
+            <a href="#about">About Us</a>
+            <a href="/productos">Productos</a>
+            <a href="/formulario" class="btn-nav">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN DE INICIO / HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>El arte del cacao puro</h1>
+            <p>Descubre la intensidad y el origen en cada uno de nuestros detalles de chocolate.</p>
+            <a href="#productos" class="btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ABOUT US -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <div class="divider"></div>
+                    <p>En <strong>Apokacao</strong>, transformamos el grano de cacao más selecto en una experiencia sensorial única. Nos apasiona la pureza, el respeto por el origen y el proceso artesanal.</p>
+                    <p>Creemos que el buen chocolate no solo se saborea, se vive. Desde nuestras barras más intensas hasta las delicadas cascarillas para infusión, cada producto está pensado para los verdaderos amantes del buen cacao.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Espacio pensado para una imagen estética de cacao -->
+                    <div class="image-placeholder">Pureza desde el origen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PRODUCTOS -->
+    ><main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Apokacao. Todos los derechos reservados. Hecho con pasión por el cacao.</p>
+    </footer>
+
+</body>
+</html>
